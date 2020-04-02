@@ -4,7 +4,7 @@ pipeline {
     }
     tools {
         // Note: this should match with the tool name configured in your jenkins instance (JENKINS_URL/configureTools/)
-        maven "Maven 3.6.0"
+        maven "maven"
     }
     environment {
         // This can be nexus3 or nexus2
@@ -32,7 +32,7 @@ pipeline {
                 script {
                     // If you are using Windows then you should use "bat" step
                     // Since unit testing is out of the scope we skip them
-                    sh "mvn package -DskipTests=true"
+                    bat "mvn package -DskipTests=true"
                 }
             }
         }
