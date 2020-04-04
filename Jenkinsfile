@@ -83,7 +83,7 @@ pipeline {
     }
 	post {
     always {
-        emailext body: 'Build successful', subject: 'Test', to : 'aymen.kazdaghli@esprit.tn'
+      mail to: aymen.kazdaghli@esprit.tn, subject: ‘The Pipeline completed ‘
     }
 }
 }
