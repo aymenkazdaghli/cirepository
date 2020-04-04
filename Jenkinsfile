@@ -36,6 +36,13 @@ pipeline {
                 }
             }
         }
+	    stage("mvn test") {
+            steps {
+                script {
+                    bat "mvn test"
+                }
+            }
+        }
 		 stage("publish to nexus") {
             steps {
                 script {
