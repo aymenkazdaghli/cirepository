@@ -81,4 +81,9 @@ pipeline {
     }
         
     }
+	post {
+    always {
+        emailext body: 'Build successful', subject: 'Test', to : 'aymen.kazdaghli@esprit.tn'
+    }
+}
 }
