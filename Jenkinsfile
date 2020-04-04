@@ -80,10 +80,10 @@ pipeline {
         
     }
         
-    
+    }
 	post {
     always {
-      mail to: aymen.kazdaghli@esprit.tn, subject: ‘The Pipeline completed ‘
+        emailext body: 'Build successful', subject: 'Test', to : 'aymen.kazdaghli@esprit.tn'
     }
 }
 }
