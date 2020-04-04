@@ -80,7 +80,7 @@ pipeline {
         
     }
         
-    }
+    
 	post {
     always {
       mail to: aymen.kazdaghli@esprit.tn, subject: ‘The Pipeline completed ‘
